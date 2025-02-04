@@ -6,6 +6,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PersonIcon from '@mui/icons-material/Person';
 import ModalUser from "./ModalUser";
+import { Spin } from "antd";
 
 
 const Users = () => {
@@ -14,7 +15,7 @@ const Users = () => {
     const [rowsPerPage, setRowsPerPage] = useState(5);
     const [modal, setModal] = useState(false);
     const [userId, setUserId] = useState(null);
-    const { users } = useSelector(state => state.users);
+    const { users, loading } = useSelector(state => state.users);
     const dispatch = useDispatch();
 
     //! GET USERS REDUX FUNCTION 
@@ -48,6 +49,14 @@ const Users = () => {
     const updateModal = (id) => {
         setModal(true);
         setUserId(id)
+    }
+
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center h-[100vh]">
+                <Spin>Loading...</Spin>
+            </div>
+        )
     }
     return (
         <div className="px-10 flex flex-col items-center justify-center w-full min-h-screen py-20">
