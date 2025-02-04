@@ -92,9 +92,9 @@ const Users = () => {
 
                     <TableBody>
                         {users.length > 0 ? (
-                            users
-                                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                            [...users]
                                 .reverse()
+                                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((user, index) => (
                                     <TableRow key={user.id} className="!hover:bg-gray-100 transition-all duration-200">
                                         <TableCell className="sticky left-0 z-10 bg-white">{page * rowsPerPage + index + 1}</TableCell>
