@@ -73,7 +73,7 @@ const Users = () => {
                                     color="success"
                                     onClick={handleOpen}
                                     className="!text-white"
-                                    endIcon={<PersonIcon/>}
+                                    endIcon={<PersonIcon />}
                                 >
                                     ADD USER
                                 </Button>
@@ -92,7 +92,7 @@ const Users = () => {
 
                     <TableBody>
                         {users.length > 0 ? (
-                            [...users]
+                            users
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .reverse()
                                 .map((user, index) => (
