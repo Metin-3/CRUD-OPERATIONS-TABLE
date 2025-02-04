@@ -1,6 +1,6 @@
 # React + Vite CRUD-OPERATIONS-TABLE
 
-##Technologies used
+## Technologies used
 1. React.js
 2. Redux
 3. Redux Toolkit
