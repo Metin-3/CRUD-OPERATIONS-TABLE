@@ -54,7 +54,7 @@ const Users = () => {
     if (loading) {
         return (
             <div className="flex justify-center items-center h-[100vh]">
-                <Spin>Loading...</Spin>
+                <Spin size="large">Loading...</Spin>
             </div>
         )
     }
