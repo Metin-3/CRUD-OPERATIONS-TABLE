@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, getUser } from "../redux/userSlice";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import PersonIcon from '@mui/icons-material/Person';
 import ModalUser from "./ModalUser";
 
 
@@ -72,6 +73,7 @@ const Users = () => {
                                     color="success"
                                     onClick={handleOpen}
                                     className="!text-white"
+                                    endIcon={<PersonIcon/>}
                                 >
                                     ADD USER
                                 </Button>
